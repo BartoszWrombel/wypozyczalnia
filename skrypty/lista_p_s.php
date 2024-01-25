@@ -1,11 +1,29 @@
 <?php
-	require '../baza.php';
-	$sql = 'SELECT pacjent.imie,pacjent.nazwisko,pacjent.numer_pesel,lekarz.imie_l,lekarz.nazwisko_l,oddzialy.oddzial,pacjent.historia_choroby 
-	FROM pacjent
-	   INNER JOIN lekarz ON pacjent.id_lekarz = lekarz.id_lekarz
-	   INNER JOIN oddzialy ON pacjent.id_oddzial = oddzialy.id_oddzial
-	ORDER BY pacjent.nazwisko';
-	
-	$zapytanie = $pdo->query($sql); //wywołanie zapytanie sql zbudowanego wyżej
-	$pacjenci = $zapytanie->fetchAll(); //przypisanie pobranych danych do zmiennej pacjenci w formie tablicy.
-?>
+require '../baza.php';
+$sql = 'SELECT imie, nazwisko, pesel
+	FROM klient
+	ORDER BY nazwisko';
+
+$zapytanie = $pdo->query($sql); //wywołanie zapytanie sql zbudowanego wyżej
+$klienci = $zapytanie->fetchAll(); //przypisanie pobranych danych do zmiennej w formie tablicy.
+
+
+$sql1 = 'SELECT marka, model, wariant, kolor, numer_rejestracyjny, rok_produkcji, cena_za_dzien, status_samochodu
+	FROM samochod
+	ORDER BY cena_za_dzien';
+
+$zapytanie = $pdo->query($sql1); //wywołanie zapytanie sql zbudowanego wyżej
+$samochody = $zapytanie->fetchAll(); //przypisanie pobranych danych do zmiennej w formie tablicy.
+
+
+$sql2 = 'SELECT wypozyczenia.id_wypozyczenia, klient.imie, klient.nazwisko, klient.pesel, 
+	samochod.marka, samochod.model, samochod.wariant, samochod.kolor, samochod.numer_rejestracyjny, 
+	samochod.rok_produkcji, samochod.cena_za_dzien, samochod.status_samochodu, 
+	wypozyczenia.data_wypozyczenia, wypozyczenia.data_zwrotu, wypozyczenia.koszt_calkowity, wypozyczenia.uwagi 
+	FROM wypozyczenia
+	INNER JOIN klient ON wypozyczenia.id_klient = klient.id_klient
+	INNER JOIN samochod ON wypozyczenia.id_samochod = samochod.id_samochod
+	ORDER BY wypozyczenia.data_wypozyczenia';
+
+$zapytanie = $pdo->query($sql2); //wywołanie zapytanie sql zbudowanego wyżej
+$wypozyczenia = $zapytanie->fetchAll(); //przypisanie pobranych danych do zmiennej w formie tablicy.
