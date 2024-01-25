@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Szpital powiatowy w Zakolu Dolnym</title>
+	<title>Wypożyczalnia samochodów</title>
 	<link rel="stylesheet" type="text/css" href="../style/style.css" />
 </head>
 
@@ -13,7 +13,7 @@
 		<a href="wyloguj.php" class="right">Wyloguj</a>
 		<a href="login.php" class="right">Zaloguj</a>
 
-		<h1>SZPITAL POWIATOWY W ZAKOLU DOLNYM</h1>
+		<h1>Wypożyczalnia samochodów</h1>
 		<nav>
 			<ul>
 				<li><a href="../index.php">Home</a></li>
@@ -37,7 +37,7 @@
 				<p><input type="text" name="login" placeholder="podaj login" required /></p>
 				<p><input type="password" name="password1" placeholder="podaj hasło" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Hasło musi zawierać co najmniej jedną cyfrę, jedną małą literę, jedną dużą literę, jeden znak specjalny i mieć co najmniej 8 znaków" /></p>
 				<p><input type="email" name="email" placeholder="podaj email" required /></p>
-				<p><input type="text" name="id_uprawnienia" placeholder="podaj uprawnienia" required /></p>
+				<p><input type="text" name="nazwa_uprawnienia" placeholder="podaj uprawnienia" required /></p>
 				<input type="submit" name="submit" value="rejestruj" />
 			</form>
 			<?php
