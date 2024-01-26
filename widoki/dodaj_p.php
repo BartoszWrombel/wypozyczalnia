@@ -57,7 +57,7 @@
 						?>
 							<option value=<?= $sam ?>><?= $sam ?> - <?= $link['marka'] ?> <?= $link['model'] ?>
 								<?= $link['kolor'] ?> <?= $link['numer_rejestracyjny'] ?> <?= $link['rok_produkcji'] ?>
-								<?= $link['cena_za_dzien'] ?> <?= $link['status_samochodu'] ?></option>
+								<?= $link['cena_za_dzien'] ?></option>
 						<?php
 						}
 						?>

@@ -34,7 +34,6 @@
 				<th>Numer rejestracyjny samochodu</th>
 				<th>Rok produkcji samochodu</th>
 				<th>Cena za dzień</th>
-				<th>Status samochodu</th>
 			</tr>
 			<?php
 			session_start();
@@ -49,7 +48,6 @@
 						<td><?= $link['numer_rejestracyjny'] ?></td>
 						<td><?= $link['rok_produkcji'] ?></td>
 						<td><?= $link['cena_za_dzien'] ?></td>
-						<td><?= $link['status_samochodu'] ?></td>
 					</tr>
 			<?php
 				}
