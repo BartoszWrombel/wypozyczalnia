@@ -31,13 +31,26 @@
 		session_start();
 		// if (isset($_SESSION['sesja'])) {
 		// 	if ($_SESSION['uprawnienia'] == 'pielęgniarka' || $_SESSION['uprawnienia'] == 'administrator') {
+		require '../skrypty/wczytywanie_l_s.php';
 		?>
 		<div class="left" style="margin-left:150px;padding:30px 10px 0px 10px;">
 			<form action="rejestruj.php" method="post">
 				<p><input type="text" name="login" placeholder="podaj login" required /></p>
 				<p><input type="password" name="password1" placeholder="podaj hasło" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Hasło musi zawierać co najmniej jedną cyfrę, jedną małą literę, jedną dużą literę, jeden znak specjalny i mieć co najmniej 8 znaków" /></p>
 				<p><input type="email" name="email" placeholder="podaj email" required /></p>
-				<p><input type="text" name="nazwa_uprawnienia" placeholder="podaj uprawnienia" required /></p>
+				<p>
+					<select name="id_uprawnienia" required>
+						<option value="" disabled selected hidden>wybierz poziom uprawnień</option>
+						<?php
+						foreach ($u as $upra => $link) {
+							$upra = $upra + 1;
+						?>
+							<option value=<?= $upra ?>><?= $upra ?> - <?= $link['nazwa_uprawnienia'] ?> </option>
+						<?php
+						}
+						?>
+					</select>
+				</p>
 				<input type="submit" name="submit" value="rejestruj" />
 			</form>
 			<?php
