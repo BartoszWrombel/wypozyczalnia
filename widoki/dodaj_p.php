@@ -55,7 +55,7 @@
 						foreach ($s as $sam => $link) {
 							$sam = $sam + 1;
 						?>
-							<option value=<?= $sam ?>><?= $sam ?> - <?= $link['marka'] ?> <?= $link['model'] ?> <?= $link['wariant'] ?>
+							<option value=<?= $sam ?>><?= $sam ?> - <?= $link['marka'] ?> <?= $link['model'] ?>
 								<?= $link['kolor'] ?> <?= $link['numer_rejestracyjny'] ?> <?= $link['rok_produkcji'] ?>
 								<?= $link['cena_za_dzien'] ?> <?= $link['status_samochodu'] ?></option>
 						<?php
@@ -72,7 +72,7 @@
 				</p>
 
 				<p>
-					<label for="data">Wybierz datę wypożyczenia:</label>
+					<label for="data">Wybierz datę zwrotu:</label>
 					<input type="date" id="data_zwrotu" name="data_zwrotu" required placeholder="wybierz datę zwrotu" min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" />
 				</p>
 

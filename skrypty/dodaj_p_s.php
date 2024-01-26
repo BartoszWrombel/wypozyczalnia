@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 			// budowa zapytania w celu pobrania danych nowo dodanego wynajmu
 			$sql2 = 'SELECT wypozyczenia.id_wypozyczenia, wypozyczenia.id_klient, klient.imie, 
 			klient.nazwisko, samochod.id_samochod, samochod.marka, samochod.model, 
-			samochod.wariant, wypozyczenia.data_wypozyczenia, wypozyczenia.data_zwrotu, 
+			wypozyczenia.data_wypozyczenia, wypozyczenia.data_zwrotu, 
 			wypozyczenia.koszt_calkowity
 			 FROM wypozyczenia
 			 INNER JOIN klient ON wypozyczenia.id_klient = klient.id_klient
@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
 			$stmt2->execute();
 			$ostatni = $stmt2->fetch();
 			if ($nowy > 0) {
-				echo '<h3>Wypozyczono ' . $ostatni['marka'] . ' ' . $ostatni['model'] . ' ' . $ostatni['wariant'] . ' dla ' . $ostatni['imie'] . ' ' . $ostatni['nazwisko'] . ' od ' . $ostatni['data_wypozyczenia'] . ' do ' . $ostatni['data_zwrotu'] . ' na ' . $ilosc_dni . ' dni za ' . $ostatni['koszt_calkowity'] . ' zł ' . '</h3>';
+				echo '<h3>Wypozyczono ' . $ostatni['marka'] . ' ' . $ostatni['model'] . ' dla ' . $ostatni['imie'] . ' ' . $ostatni['nazwisko'] . ' od ' . $ostatni['data_wypozyczenia'] . ' do ' . $ostatni['data_zwrotu'] . ' na ' . $ilosc_dni . ' dni za ' . $ostatni['koszt_calkowity'] . ' zł ' . '</h3>';
 			}
 		} else {
 			// Samochód jest zajęty w danym terminie
