@@ -47,7 +47,6 @@
 					<th>Numer rejestracyjny samochodu</th>
 					<th>Rok produkcji samochodu</th>
 					<th>Cena za dzień</th>
-					<th>Status samochodu</th>
 					<th>Data wypożyczenia</th>
 					<th>Data zwrotu</th>
 					<th>Koszt całkowity</th>
