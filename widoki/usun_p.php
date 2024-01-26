@@ -68,7 +68,6 @@
 						<td><?= $link['numer_rejestracyjny'] ?></td>
 						<td><?= $link['rok_produkcji'] ?></td>
 						<td><?= $link['cena_za_dzien'] ?></td>
-						<td><?= $link['status_samochodu'] ?></td>
 						<td><?= $link['data_wypozyczenia'] ?></td>
 						<td><?= $link['data_zwrotu'] ?></td>
 						<td><?= $link['koszt_calkowity'] ?></td>
