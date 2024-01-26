@@ -8,7 +8,7 @@ $zapytanie = $pdo->query($sql); //wywołanie zapytanie sql zbudowanego wyżej
 $klienci = $zapytanie->fetchAll(); //przypisanie pobranych danych do zmiennej w formie tablicy.
 
 
-$sql1 = 'SELECT marka, model, wariant, kolor, numer_rejestracyjny, rok_produkcji, cena_za_dzien, status_samochodu
+$sql1 = 'SELECT marka, model, kolor, numer_rejestracyjny, rok_produkcji, cena_za_dzien, status_samochodu
 	FROM samochod
 	ORDER BY cena_za_dzien';
 
@@ -17,7 +17,7 @@ $samochody = $zapytanie->fetchAll(); //przypisanie pobranych danych do zmiennej 
 
 
 $sql2 = 'SELECT wypozyczenia.id_wypozyczenia, klient.imie, klient.nazwisko, klient.pesel, 
-	samochod.marka, samochod.model, samochod.wariant, samochod.kolor, samochod.numer_rejestracyjny, 
+	samochod.marka, samochod.model, samochod.kolor, samochod.numer_rejestracyjny, 
 	samochod.rok_produkcji, samochod.cena_za_dzien, samochod.status_samochodu, 
 	wypozyczenia.data_wypozyczenia, wypozyczenia.data_zwrotu, wypozyczenia.koszt_calkowity, wypozyczenia.uwagi 
 	FROM wypozyczenia

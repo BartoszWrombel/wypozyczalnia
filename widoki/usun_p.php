@@ -43,7 +43,6 @@
 					<th>Numer PESEL klienta</th>
 					<th>Marka samochodu</th>
 					<th>Model samochodu</th>
-					<th>Wariant samochodu</th>
 					<th>Kolor samochodu</th>
 					<th>Numer rejestracyjny samochodu</th>
 					<th>Rok produkcji samochodu</th>
@@ -65,7 +64,6 @@
 						<td><?= $link['pesel'] ?></td>
 						<td><?= $link['marka'] ?></td>
 						<td><?= $link['model'] ?></td>
-						<td><?= $link['wariant'] ?></td>
 						<td><?= $link['kolor'] ?></td>
 						<td><?= $link['numer_rejestracyjny'] ?></td>
 						<td><?= $link['rok_produkcji'] ?></td>
