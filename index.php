@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 
-<body>
+<body style="background: url('grafika/tlo.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 	<div class="wrapper">
 		<a href="widoki/rejestruj.php" class="right">Rejestracja</a>
 		<a href="widoki/wyloguj.php" class="right">Wyloguj</a>
@@ -17,11 +17,12 @@
 		<nav>
 			<ul>
 				<li><a href="index.php">Home</a></li>
-				<li><a href="widoki/lista_p.php">Lista pacjentów</a></li>
-				<li><a href="widoki/wyszukaj_p.php">Wyszukaj pacjenta</a></li>
-				<li><a href="widoki/dodaj_p.php">Dodaj pacjenta</a></li>
-				<li><a href="widoki/edytuj_p.php">Edytuj dane</a></li>
-				<li><a href="widoki/usun_p.php">Wyrejestruj pacjenta</a></li>
+				<li><a href="widoki/lista_p.php">Lista samochodów</a></li>
+				<li><a href="widoki/samochody.php">Samochody</a></li>
+				<li><a href="widoki/klient.php">Klient</a></li>
+				<li><a href="widoki/wynajem.php">Wynajem</a></li>
+				<li><a href="widoki/usuwanie_rezerwacji.php">Usuwanie rezerwacji</a></li>
+				<li><a href="widoki/statystyka.php">Statystyka</a></li>
 			</ul>
 		</nav>
 		<h2>WITAJ W APLIKACJI Wypożyczalnia samochodów</h2>
@@ -29,15 +30,20 @@
 
 		session_start();
 		if (isset($_SESSION['sesja'])) {
-			echo '<h2>Jesteś zalogowany</h2>';
+			echo '<h2 style="color: red; font-weight: bold;">Jesteś zalogowany</h2>';
 		} else {
-			echo '<h3>Proszę się zalogować</h3>';
+			echo '<h2 style="color: red; font-weight: bold;">Proszę się zalogować</h2>';
 			header("Location:widoki/login.php");
 		}
 		?>
 
 	</div>
-	</div>
+	<footer>
+		<p>&copy; 2024 Wypożyczalnia samochodów. Wszelkie prawa zastrzeżone.</p>
+		<p>Adres: ul. Przykładowa 123, 00-000 Warszawa</p>
+		<p>Telefon: +48 123 456 789</p>
+		<p>Email: info@wypozyczalnia-samochodow.pl</p>
+	</footer>
 </body>
 
 </html>

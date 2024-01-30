@@ -1,5 +1,10 @@
-body {width:100%;margin:0px auto 0px auto;background:white;font-family: calibri,garamond;}
-.wrapper {width:90%;margin:0px auto 0px auto;}
+body {width:100%;margin:0px auto 0px auto;background:white;font-family: calibri,garamond;
+    background: url('../grafika/tlo.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;}
+.wrapper {width:90%;margin:0px auto 0px auto; padding: 20px;background-color: rgba(255, 255, 255, 0.7);}
 h1 {text-align:center;background:black;color:white;width:100%;margin:0px;padding:30px 0px 30px 0px;clear:both;}		
 h2 {margin-top: 40px;}
 table {width:80%;margin: 40px auto 30px auto;border-collapse: collapse;}
@@ -28,7 +33,12 @@ label {text-align: left;display: block;}
 .login {width:35%;border:1px solid red;margin:50px auto 50px auto;padding:5% 0% 0% 0%;}
 textarea {margin:0px;}
 
-
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
 
 
 

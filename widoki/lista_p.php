@@ -17,12 +17,12 @@
 		<nav>
 			<ul>
 				<li><a href="../index.php">Home</a></li>
-				<li><a href="lista_p.php">Lista pacjentów</a></li>
-				<li><a href="wyszukaj_p.php">Wyszukaj pacjenta</a></li>
-				<li><a href="dodaj_p.php">Dodaj pacjenta</a></li>
-				<li><a href="edytuj_p.php">Edytuj dane</a></li>
-				<li><a href="usun_p.php">Wyrejestruj pacjenta</a></li>
-			</ul>
+				<li><a href="lista_p.php">Lista samochodów</a></li>
+				<li><a href="samochody.php">Samochody</a></li>
+				<li><a href="klient.php">Klient</a></li>
+				<li><a href="wynajem.php">Wynajem</a></li>
+				<li><a href="usuwanie_rezerwacji.php">Usuwanie rezerwacji</a></li>
+				<li><a href="statystyka.php">Statystyka</a></li>
 			</ul>
 		</nav>
 		<h2>Lista samochodów do wypożyczenia</h2>
@@ -52,11 +52,18 @@
 			<?php
 				}
 			} else {
-				echo 'Proszę się zalogować.';
+				echo '<h2 style="color: red; font-weight: bold;">Proszę się zalogować.</h2>';
 			}
 			?>
 		</table>
 	</div>
+	<footer>
+		<p>&copy; 2024 Wypożyczalnia samochodów. Wszelkie prawa zastrzeżone.</p>
+		<p>Adres: ul. Przykładowa 123, 00-000 Warszawa</p>
+		<p>Telefon: +48 123 456 789</p>
+		<p>Email: info@wypozyczalnia-samochodow.pl</p>
+		<p>Autor: Bartosz Wrombel</p>
+	</footer>
 </body>
 
 </html>
